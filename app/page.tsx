@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Image from "next/image";
 import OrbitingCircles from "@/components/ui/orbiting-circles";
+import Globe from "@/components/ui/Globe";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -39,14 +40,20 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-grow flex flex-col items-center justify-center overflow-hidden rounded-lg border bg-white md:shadow-xl p-4 pt-20 pb-20"> {/* Add padding to account for the fixed header and footer */}
-        <span className={`pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-5xl md:text-7xl font-semibold leading-none text-transparent ${isMobile ? 'text-4xl' : ''}`}>
+      <div className="flex-grow flex flex-col items-center justify-center overflow-hidden rounded-lg border bg-white md:shadow-xl p-4 pt-20 pb-20 relative"> 
+        {/* Globe as a background */}
+        <Globe 
+          className={`absolute inset-0 w-full h-full object-cover z-0 ${isMobile ? '-translate-y-20' : 'translate-y-1/4'}`} // Move globe much higher on mobile
+        />
+
+        {/* Socials text */}
+        <span className={`pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-5xl md:text-7xl font-semibold leading-none text-transparent z-10 ${isMobile ? 'text-5xl' : ''}`}>
           Socials
         </span>
 
         {/* Inner Circles (Socials) */}
         <OrbitingCircles
-          className="size-[50px] border-none bg-transparent"
+          className="size-[50px] border-none bg-transparent z-20"
           duration={20}
           delay={20}
           radius={innerRadius} // Use dynamic radius
@@ -57,7 +64,7 @@ export default function Home() {
         </OrbitingCircles>
 
         <OrbitingCircles
-          className="size-[50px] border-none bg-transparent"
+          className="size-[50px] border-none bg-transparent z-20"
           duration={20}
           delay={10}
           radius={innerRadius} // Use dynamic radius
@@ -69,7 +76,7 @@ export default function Home() {
 
         {/* Outer Circles (reverse) with other Socials */}
         <OrbitingCircles
-          className="size-[40px] border-none bg-transparent"
+          className="size-[40px] border-none bg-transparent z-20"
           radius={outerRadius} // Use dynamic radius
           duration={20}
           reverse
@@ -80,7 +87,7 @@ export default function Home() {
         </OrbitingCircles>
 
         <OrbitingCircles
-          className="size-[55px] border-none bg-transparent"
+          className="size-[55px] border-none bg-transparent z-20"
           radius={outerRadius} // Use dynamic radius
           duration={20}
           delay={20}
@@ -93,11 +100,11 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 w-full bg-[#5f6368] text-[#f1f3f4] py-4 text-center flex flex-col justify-center items-center">
+      <footer className="fixed bottom-0 left-0 w-full bg-[#f1f3f4] text-[#000000] py-4 text-center flex flex-col justify-center items-center">
         <p className={`text-sm ${isMobile ? 'text-xs' : ''}`}>
           Powered by <span className="font-bold">GDG</span> | Designed with <span style={{ color: "#ea4335" }}>❤</span> for Developers
         </p>
-        <p className={`text-xs text-[#f1f3f4]/80 mt-1 ${isMobile ? 'text-xs' : ''}`}>
+        <p className={`text-xs text-[#000000]/80 mt-1 ${isMobile ? 'text-xs' : ''}`}>
           © 2024 GDG PPSU. All rights reserved.
         </p>
       </footer>
