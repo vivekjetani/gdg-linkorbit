@@ -102,7 +102,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="fixed bottom-0 left-0 w-full bg-[#f1f3f4] text-[#000000] py-4 text-center flex flex-col justify-center items-center">
         <p className={`text-sm ${isMobile ? 'text-xs' : ''}`}>
-          Powered by <span className="font-bold">GDG</span> | Designed with <span style={{ color: "#ea4335" }}>❤</span> for Developers
+          Powered by <span className="font-bold">GDG PPSU</span> | Designed with <span style={{ color: "#ea4335" }}>❤</span> for Developers
         </p>
         <p className={`text-xs text-[#000000]/80 mt-1 ${isMobile ? 'text-xs' : ''}`}>
           © 2024 GDG PPSU. All rights reserved.
