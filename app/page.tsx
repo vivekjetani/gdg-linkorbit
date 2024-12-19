@@ -69,7 +69,7 @@ export default function Home() {
           delay={10}
           radius={innerRadius} // Use dynamic radius
         >
-          <a href="https://chat.whatsapp.com/Ky666lzsN7SGDmnEne5ROw" title="WhatsApp Group" target="_blank" rel="noopener noreferrer">
+          <a href="https://chat.whatsapp.com/Ch3KsdfdXYt0nhiQ6I1p8C" title="WhatsApp Group" target="_blank" rel="noopener noreferrer">
             <Image src="/WhatsApp_icon.png" alt="WhatsApp Icon" width={50} height={50} />
           </a>
         </OrbitingCircles>
