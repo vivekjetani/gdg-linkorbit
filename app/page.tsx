@@ -58,7 +58,7 @@ export default function Home() {
           delay={20}
           radius={innerRadius} // Use dynamic radius
         >
-          <a href="https://www.instagram.com/gdgppsu/" title="Instagram" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/gdgcppsu?igsh=NGQ1NnhxZmVmYzZo" title="Instagram" target="_blank" rel="noopener noreferrer">
             <Image src="/instagram.png" alt="Instagram Icon" width={50} height={50} />
           </a>
         </OrbitingCircles>
